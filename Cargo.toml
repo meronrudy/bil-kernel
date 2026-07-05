@@ -8,7 +8,7 @@ members = [
   "examples/bank-projection",
   "examples/insurance-projection",
   "examples/legal-projection"
-, "examples/projection-demo"]
+, "examples/observation-algebra-demo"]
 
 [workspace.package]
 edition = "2021"

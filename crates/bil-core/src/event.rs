@@ -1,5 +1,10 @@
 use crate::primitives::*;
 
+/// A semantically neutral observable admitted into the BIL evidence kernel.
+///
+/// This type does not represent "what happened" in the world.
+/// It represents what has entered institutional evidence as an opaque,
+/// authority-bound, time-anchored, cryptographically committed observation.
 #[derive(Clone, Copy, Debug, Eq, PartialEq)]
 pub struct KernelEvent {
     pub id: EventId,

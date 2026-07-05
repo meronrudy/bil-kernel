@@ -2,10 +2,11 @@ use bil_core::{KernelEvent, Projection};
 
 pub struct LegalProjection;
 
-#[derive(Debug, Eq, PartialEq)]
+#[derive(Debug, PartialEq, Eq)]
 pub struct LegalView {
-    pub is_admissible: bool,
-    pub has_authority: bool,
+    pub local_label: &'static str,
+    pub authority_reference_present: bool,
+    pub evidence_commitment_present: bool,
 }
 
 impl Projection<KernelEvent> for LegalProjection {
@@ -13,8 +14,9 @@ impl Projection<KernelEvent> for LegalProjection {
 
     fn project(_event: &KernelEvent) -> Self::Output {
         LegalView {
-            is_admissible: true,
-            has_authority: true,
+            local_label: "legal-local-view",
+            authority_reference_present: true,
+            evidence_commitment_present: true,
         }
     }
 }

@@ -41,3 +41,10 @@ Static analysis to enforce `no_std`, acyclic dependencies, and semantic exclusio
 
 ## 8. Actuarial bridge
 Projections that extract statistical features from the receipt graph for risk inference.
+
+## 9. Kernel observables, not world events
+`KernelEvent` is named historically. Conceptually, it should be understood as a kernel observable.
+
+The BIL Kernel does not claim that a world event occurred, nor that a domain interpretation is true. It records that an opaque observation was emitted under an authority reference, time anchor, event type identifier, evidence commitment, optional value/state commitments, and previous-link commitment.
+
+Future versions may rename `KernelEvent` to `KernelObservable`, but v0.1 preserves the existing name for API stability.

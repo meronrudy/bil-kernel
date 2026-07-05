@@ -77,7 +77,7 @@ fn main() {
 
     // 4. Check examples depend on bil-core
     let mut examples_depend = true;
-    for example in &["bank-projection", "insurance-projection", "legal-projection", "projection-demo"] {
+    for example in &["bank-projection", "insurance-projection", "legal-projection", "observation-algebra-demo"] {
         let example_toml = fs::read_to_string(format!("examples/{}/Cargo.toml", example)).expect("Failed to read example Cargo.toml");
         if !example_toml.contains("bil-core") {
             println!("[FAIL] example {} does not depend on bil-core", example);
@@ -107,7 +107,7 @@ fn main() {
         all_passed = false;
     }
 
-    if Path::new("examples/projection-demo/src/main.rs").exists() {
+    if Path::new("examples/observation-algebra-demo/src/main.rs").exists() {
         println!("[PASS] projection demo present");
     } else {
         println!("[FAIL] projection demo missing");

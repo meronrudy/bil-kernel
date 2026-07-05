@@ -2,10 +2,11 @@ use bil_core::{KernelEvent, Projection};
 
 pub struct InsuranceProjection;
 
-#[derive(Debug, Eq, PartialEq)]
+#[derive(Debug, PartialEq, Eq)]
 pub struct InsuranceView {
+    pub local_label: &'static str,
     pub evidence_present: bool,
-    pub has_prior_link: bool,
+    pub prior_link_present: bool,
 }
 
 impl Projection<KernelEvent> for InsuranceProjection {
@@ -13,8 +14,9 @@ impl Projection<KernelEvent> for InsuranceProjection {
 
     fn project(event: &KernelEvent) -> Self::Output {
         InsuranceView {
+            local_label: "insurance-local-view",
             evidence_present: true,
-            has_prior_link: event.previous.is_some(),
+            prior_link_present: event.previous.is_some(),
         }
     }
 }

@@ -1,5 +1,5 @@
 [package]
-name = "projection-demo"
+name = "observation-algebra-demo"
 version = "0.1.0"
 edition = "2021"
 
