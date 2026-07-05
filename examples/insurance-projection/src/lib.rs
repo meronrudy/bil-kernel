@@ -19,6 +19,3 @@ impl Projection<KernelEvent> for InsuranceProjection {
     }
 }
 
-fn main() {
-    println!("Insurance projection example");
-}

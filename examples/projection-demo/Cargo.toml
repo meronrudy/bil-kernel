@@ -1,0 +1,12 @@
+[package]
+name = "projection-demo"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+bil-core = { path = "../../crates/bil-core" }
+bil-crypto = { path = "../../crates/bil-crypto" }
+bank-projection = { path = "../bank-projection" }
+insurance-projection = { path = "../insurance-projection" }
+legal-projection = { path = "../legal-projection" }
+hex = "0.4.3"

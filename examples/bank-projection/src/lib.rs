@@ -19,6 +19,3 @@ impl Projection<KernelEvent> for BankProjection {
     }
 }
 
-fn main() {
-    println!("Bank projection example");
-}

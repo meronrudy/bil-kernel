@@ -19,6 +19,3 @@ impl Projection<KernelEvent> for LegalProjection {
     }
 }
 
-fn main() {
-    println!("Legal projection example");
-}
