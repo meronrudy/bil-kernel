@@ -67,6 +67,19 @@ Conceptually, the flow is:
 
 The current crypto crate uses mock engines in tests and demos. The important property here is deterministic structure, not production cryptography policy.
 
+## Cryptographic Boundary
+
+The kernel model depends on deterministic structure:
+
+1. canonical bytes
+2. stable receipt hashes
+3. explicit signing interfaces
+4. anchored receipt lifecycle states
+
+The current implementation demonstrates these boundaries with mock or helper cryptographic components suitable for tests and examples.
+
+Production deployments should treat signing, key custody, anchoring, algorithm agility, audit retention, and revocation as separate integration layers outside the kernel core.
+
 ## Where Semantics Enter
 
 Semantics enter through projections, not through the kernel. A projection implements:

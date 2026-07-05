@@ -28,6 +28,24 @@ cargo run -p bil-analyzer
 cargo run -p observation-algebra-demo
 ```
 
+## Recommended Validation Before Opening a PR
+
+Before opening or updating a pull request, run:
+
+```bash
+cargo fmt --check
+cargo clippy --workspace --all-targets -- -D warnings
+cargo test --workspace
+cargo run -p bil-analyzer
+cargo run -p observation-algebra-demo
+```
+
+The first three commands check Rust formatting, lint hygiene, and workspace tests. The analyzer checks the kernel boundary. The demo verifies that the observable model and projection examples still execute end to end.
+
+## Prototype Boundary
+
+The examples are designed to demonstrate architecture, not production policy. The projection crates intentionally stay small so the kernel boundary remains visible.
+
 ## What Success Looks Like
 
 ### 1. Workspace tests
@@ -37,8 +55,6 @@ cargo run -p observation-algebra-demo
 - `bil-core` receipt lifecycle tests
 - `bil-codec` canonical encoding tests
 - `bil-crypto` hashing and signature tests
-
-You may still see non-failing compiler warnings. The success condition is that the test run completes without failures.
 
 ### 2. Analyzer run
 
