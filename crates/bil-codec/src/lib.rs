@@ -1,14 +1,11 @@
-pub fn add(left: u64, right: u64) -> u64 {
-    left + right
+#![no_std]
+#![forbid(unsafe_code)]
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum CodecError {
+    BufferTooSmall,
 }
 
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
+pub trait CanonicalEncode {
+    fn encode_canonical(&self, out: &mut [u8]) -> Result<usize, CodecError>;
 }

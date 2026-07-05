@@ -1,14 +1,11 @@
-pub fn add(left: u64, right: u64) -> u64 {
-    left + right
+#![no_std]
+#![forbid(unsafe_code)]
+
+pub trait HashEngine {
+    fn hash32(&self, bytes: &[u8]) -> [u8; 32];
 }
 
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
+pub trait SignatureEngine {
+    fn sign(&self, bytes: &[u8]) -> [u8; 64];
+    fn verify(&self, bytes: &[u8], signature: &[u8; 64]) -> bool;
 }

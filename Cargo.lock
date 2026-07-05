@@ -5,6 +5,9 @@ version = 4
 [[package]]
 name = "bank-projection"
 version = "0.1.0"
+dependencies = [
+ "bil-core",
+]
 
 [[package]]
 name = "bil-analyzer"
@@ -25,7 +28,13 @@ version = "0.1.0"
 [[package]]
 name = "insurance-projection"
 version = "0.1.0"
+dependencies = [
+ "bil-core",
+]
 
 [[package]]
 name = "legal-projection"
 version = "0.1.0"
+dependencies = [
+ "bil-core",
+]
