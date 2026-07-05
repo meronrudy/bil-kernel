@@ -1,0 +1,25 @@
+[workspace]
+resolver = "2"
+members = [
+  "crates/bil-core",
+  "crates/bil-codec",
+  "crates/bil-crypto",
+  "crates/bil-analyzer",
+  "examples/bank-projection",
+  "examples/insurance-projection",
+  "examples/legal-projection"
+]
+
+[workspace.package]
+edition = "2021"
+license = "Apache-2.0"
+authors = ["Meron Rudy"]
+repository = "https://github.com/meronrudy/bil-kernel"
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+
+[workspace.lints.clippy]
+unwrap_used = "deny"
+expect_used = "deny"
+panic = "deny"
