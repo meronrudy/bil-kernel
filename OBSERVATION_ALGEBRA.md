@@ -1,5 +1,9 @@
 # BIL Observation Algebra
 
+This note explains the mathematical framing behind the kernel observable model. If you are evaluating or integrating the workspace, start with the [README](README.md), [getting started guide](docs/getting-started.md), and [kernel model](docs/kernel-model.md), then use this document when you want the algebraic interpretation of the same design.
+
+Use this note to understand how the kernel distinguishes institutional observables from domain semantics and why projections are the correct place for interpretation.
+
 The BIL Kernel does not model reality directly. It models institutional observables: opaque, authority-bound, time-anchored, cryptographically committed objects that have entered an evidence process.
 
 A kernel observable is not a claim that an event is true. It is a record that an observation was emitted, committed, signed, and anchored under specified structural rules.
@@ -36,3 +40,11 @@ The history of anchored observables forms an evidence filtration:
 $$
 \mathcal H_t^K=\sigma(K_s:s\le t)
 $$
+
+## Related Reads
+
+- [README](README.md)
+- [Getting started](docs/getting-started.md)
+- [Kernel model](docs/kernel-model.md)
+- [Projections and examples](docs/projections-and-examples.md)
+- [BIL Kernel Specification v0.1](bil_kernel_v0_1_spec.md)

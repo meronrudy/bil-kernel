@@ -1,5 +1,9 @@
 # BIL Kernel Specification v0.1
 
+This document is the formal reference for the current kernel scope and invariants. If you are new to the repository, start with the [README](README.md) and the practical docs in [docs/getting-started.md](docs/getting-started.md) and [docs/kernel-model.md](docs/kernel-model.md), then return here for the precise specification language.
+
+Use this document when you need the authoritative statement of kernel purpose, non-goals, lifecycle boundaries, and projection model.
+
 The BIL Kernel is a minimal institutional evidence kernel for producing deterministic, verifiable, semantically neutral receipts.
 
 The kernel is not banking software, insurance software, legal software, actuarial software, or governance software. It does not compute premiums, balances, legal duties, reserves, risk scores, compliance outcomes, or claims decisions.
@@ -48,3 +52,11 @@ Projections that extract statistical features from the receipt graph for risk in
 The BIL Kernel does not claim that a world event occurred, nor that a domain interpretation is true. It records that an opaque observation was emitted under an authority reference, time anchor, event type identifier, evidence commitment, optional value/state commitments, and previous-link commitment.
 
 Future versions may rename `KernelEvent` to `KernelObservable`, but v0.1 preserves the existing name for API stability.
+
+## Related Reads
+
+- [README](README.md)
+- [Getting started](docs/getting-started.md)
+- [Kernel model](docs/kernel-model.md)
+- [Projections and examples](docs/projections-and-examples.md)
+- [BIL Observation Algebra](OBSERVATION_ALGEBRA.md)
